@@ -63,12 +63,14 @@ header{
     width: 100%;
     background-color: #42593C;
 }
-.logo {
-    position: absolute;
-    top: -65px;
-    left: 110px;
+
+.green_bar p {
+    vertical-align: middle;
+    padding-top: 12px;
+    text-align: center;
+    vertical-align: middle;
+    color: #fffffdfd;
     font-size: 50px;
-    color: white;
 }
 main {
     margin-top: 225px;
