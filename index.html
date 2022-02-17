@@ -8,10 +8,150 @@
     <title>Keatchus</title>
 </head>
 <body>
+
     <header>
-        <img src="" alt="">
-    </header>
+        <nav>
+            <!-- création du carré avec trois barre-->
+            <div class='icone'> 
+                <svg width="60" height="50">
+                    <rect x="5" y="2" rx="2" ry="2" width="50" height="5"
+                      style="fill:black;stroke:black;stroke-width:1;opacity:1.0" />
+                          <rect x="5" y="12" rx="2" ry="2" width="50" height="5"
+                      style="fill:black;stroke:black;stroke-width:1;opacity:1.0" />
+                          <rect x="5" y="22" rx="2" ry="2" width="50" height="5"
+                      style="fill:black;stroke:black;stroke-width:1;opacity:1.0" />
+                </svg> 
+            </div>
+            <ul class="menu">
+                <li>Home</li>
+                <li>Livre</li>
+                <li>Rechercher</li>
+                <li>Notifications</li>
+                <li><img class="photo_profil" src="./image/christine_Pervenche.png" alt="photo profil christine"></li>
+            </ul>
+        </nav>
+        
+        <!-- <img class="couverture" id="fond" src="./image/wallpaper.jpg" alt="photo de courverture"> -->
+        <div class="bar_swipe">
+            <ul>
+                <li>Planning</li>
+                <li>Liste de Courses</li>
+            </ul>
+        </div>
     
+    <!-- Swipe bar contained days of week -->
+    
+        <div class="week">
+            <ul>
+                <li>Lun</li>
+                <li>Mar</li>
+                <li>Mer</li>
+                <li>Jeu</li>
+                <li>Ven</li>
+                <li>Sam</li>
+                <li>Dim</li>
+            </ul>
+        </div>
+    </header>
+
+<!-- Bar swipe contained planning and liste de courses -->
+
+
+
+ 
+<!-- main contain (pics/title) -->
+<main>
+    <article>
+        <h2>Planning</h2>
+
+        <!-- Petit dejeuner -->
+
+        <article class="petit_dej">
+            <h2>Petit dejeuner</h2>
+            <!-- <img class="icone_plus" src="./image/icons8-plus-50.png" alt="Plus"> -->
+            
+            <!-- Contain pics/title of petit dejeuner -->
+
+            <section>
+                <div>
+                    <img src="./image/buddha-bowl.png" alt="buddha bowl">
+                    <div class="bloc_title">
+                        <p>buddha bowl</p>
+                    </div>
+                        
+                </div>
+            </section>
+
+        </article>    
+
+        <!-- Dejeuner -->
+
+        <article class="dej">
+            <h2>Dejeuner</h2>
+            <!-- <img class="icone_plus" src="./image/icons8-plus-50.png" alt="Plus"> -->
+            
+            <!-- Contain pics/title of dejeuner -->
+
+            <section>
+
+                <!-- Tartare avocat -->
+                <div>
+                    <img src="./image/tartare-saumon-avocat.png" alt="tartare avocat saumon">
+                    <div class="bloc_title">
+                        <p>Tartare avocat</p>  
+                    </div>
+                      
+                </div>
+
+                <!-- Wok au poulet -->
+                <div>
+                    <img src="./image/wok-au-poulet.png" alt="wok au poulet">
+                    <div class="bloc_title">
+                        <p>Wok au Poulet</p>  
+                    </div>
+                        
+                </div>
+
+                <!-- Acai Bowl -->
+                <div>
+                    <img src="./image/açai-bowl.png" alt="acai bowl">
+                    <div class="bloc_title">
+                        <p>Acai Bowl</p>  
+                    </div>
+                        
+                </div>
+            </section>
+        </article>
+    </article>
+
+    <article>
+        <h2>Liste de Courses</h2>
+
+        <ul class="shoplist">
+            <li>
+                <input type="checkbox">
+                <label for="Carotte">Carotte</label>
+            </li>
+
+            <li>
+                <input type="checkbox">
+                <label for="Poulet">Poulet</label>
+            </li>
+
+            <li>
+                <input type="checkbox">
+                <label for="Poivron">Poivrons</label>
+            </li>
+
+            <li>
+                <input type="checkbox">
+                <label for="Oignon">Oignon</label>
+            </li>
+        </ul>
+    </article>
+</main>
+
+<script src="./index.js"></script>
 </body>
 </html>
 

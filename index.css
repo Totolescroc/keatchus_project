@@ -1,0 +1,209 @@
+/* Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ############### */
+
+/* navigation bar */
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    backdrop-filter: blur(5px);
+}
+
+main {
+    margin-top: 200px;
+}
+
+/* .icone {
+    position: relative;
+} */
+
+/* Menu burger */
+.menu {
+    display: none;
+}
+
+@media screen and (min-width: 900px) {
+    .menu {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #42593C;
+        margin-bottom: 30px;
+        font-size: 22px;
+        color: #FFFFFD;
+    }  
+    .icone {
+        display: none;
+    }
+}
+
+
+/* Picture of profil */
+
+.photo_profil {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 3px solid white;
+}
+
+/* Planning/Liste de courses Swipe Bar */
+
+.bar_swipe ul {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #42593C;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 300px;;
+    margin: auto;
+    gap: 20px;
+    font-size: 22px;
+    color: #FFFFFD;
+}
+
+/* Swipe bar of Week */
+.week ul {
+    display: flex;
+    justify-content: space-around;
+    padding: 3px;
+    background-color: #42593C;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 10px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-size: 22px;
+    color: #FFFFFD;
+}
+
+
+
+h2 {
+    text-align: center;
+    font-weight: bolder;
+    font-size: 35px;
+    margin: 30px;
+}
+
+/* Changes Pics of petit dejeuner */
+.petit_dej img {
+    width: 300px;
+    height: auto;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+/* Increase font size of petit dejeuner section */
+.petit_dej section {
+    font-size: 25px;
+}
+
+/* Dejeuner section */
+
+.dej section {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 25px;
+}
+
+/* Title of each meal */
+
+.bloc_title {
+    /* position: relative; */
+    width: 300px;
+    margin: auto;
+    /* margin-top: -3px; */
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border-radius: 15px;
+    background: rgb(255, 255, 255);
+    box-shadow: 0px 0px 2px rgb(0, 0, 0);
+}
+
+/* Pics of dejeuner */
+.dej img {
+    width: 300px;
+    height: auto;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+/* Center text of petit dejeuner and dejeuner */
+
+.petit_dej, .dej {
+    text-align: center;
+    
+}
+
+
+/* liste de courses */
+
+.shoplist {
+    width: 100%;
+    text-align: center;
+    font-size: 22px;
+    
+}
+
+.shoplist li {
+    border-bottom: 1px solid black;
+    width: 200px;
+    margin: auto;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+}
+
+
+
+
