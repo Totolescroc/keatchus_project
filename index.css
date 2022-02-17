@@ -48,48 +48,52 @@ table {
 /* navigation bar */
 header{
     position: fixed;
-    top: 0;
+    display: flex;
+    flex-direction: column;
+    top: 70px;
     width: 100%;
+    padding-top: 15px;
     backdrop-filter: blur(5px);
 }
 
+.green_bar {
+    position: absolute;
+    top: -75px;
+    height: 75px;
+    width: 100%;
+    background-color: #42593C;
+}
+.logo {
+    position: absolute;
+    top: -65px;
+    left: 110px;
+    font-size: 50px;
+    color: white;
+}
 main {
-    margin-top: 200px;
+    margin-top: 225px;
 }
 
-/* .icone {
-    position: relative;
+/* .menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #42593C;
+    margin-bottom: 30px;
+    font-size: 22px;
+    color: #FFFFFD;
 } */
 
-/* Menu burger */
-.menu {
-    display: none;
-}
-
-@media screen and (min-width: 900px) {
-    .menu {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        background-color: #42593C;
-        margin-bottom: 30px;
-        font-size: 22px;
-        color: #FFFFFD;
-    }  
-    .icone {
-        display: none;
-    }
-}
 
 
 /* Picture of profil */
 
-.photo_profil {
+/* .photo_profil {
     width: 50px;
     height: 50px;
     border-radius: 50%;
     border: 3px solid white;
-}
+} */
 
 /* Planning/Liste de courses Swipe Bar */
 
@@ -97,13 +101,14 @@ main {
     text-align: center;
     display: flex;
     justify-content: center;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 7px;
+    padding-bottom: 7px;
     background-color: #42593C;
     border: 1px solid black;
     border-radius: 10px;
     width: 300px;;
     margin: auto;
+    margin-top: 7px;
     gap: 20px;
     font-size: 22px;
     color: #FFFFFD;
@@ -114,6 +119,8 @@ main {
     display: flex;
     justify-content: space-around;
     padding: 3px;
+    padding-top: 7px;
+    padding-bottom: 7px;
     background-color: #42593C;
     border: 1px solid black;
     border-radius: 10px;
@@ -183,6 +190,13 @@ h2 {
 
 .petit_dej, .dej {
     text-align: center;
+    border: 5px solid #42593C;
+    border-radius: 20px;
+    width: 3O0px;
+    margin: auto;
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
     
 }
 
@@ -190,20 +204,101 @@ h2 {
 /* liste de courses */
 
 .shoplist {
-    width: 100%;
+    width: 320px;
     text-align: center;
     font-size: 22px;
+    border: 5px solid #42593C;
+    border-radius: 20px;
+    margin: auto;
     
 }
 
 .shoplist li {
+    display: flex;
+    justify-content: flex-start;
+    gap: 60px   ;
     border-bottom: 1px solid black;
     width: 200px;
     margin: auto;
     margin-bottom: 30px;
     padding-bottom: 30px;
+    margin-top: 30px;
 }
 
 
+/* menu burger */
 
+/* background burger menu active */
+#side-bar {
+    position: absolute;
+    width: 230px;
+    height: 245px;
+    background: #42593C;
+    left: -300px;
+    top: -70px;
+    transition: 0.5s ease-out;
+    z-index: 4;
+  }
 
+  /* button burger */
+  .toggle-button {
+    position: absolute;
+    top: 15px;
+    left: 310px;
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+  }
+  .toggle-button span {
+    width: 50px;
+    height: 7px;
+    border-radius: 5px;
+    background: #FFFFFD;
+    display: block;
+    margin-top: 4px;
+    transition: 0.5s ease;
+  }
+
+  /* text of burger menu */
+.menu {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px   ;
+}
+.menu li {
+    color: #FFFFFD;
+    list-style-type: none;
+    font-size: 2.25rem;
+    cursor: pointer;
+    padding-left: 5px;
+  }
+ 
+  
+  #side-bar.active {
+    left: 0;
+    width: 100%;
+  }
+
+  /* Cross to close burger menu */
+  #side-bar.active .toggle-button {
+    top: 30px;
+    right: 0px;
+  }
+  #side-bar.active span {
+    position: absolute;
+  }
+
+  /* Animation of burger menu */
+  #side-bar.active span:nth-child(1) {
+    transform: rotate(45deg);
+  }
+  #side-bar.active span:nth-child(2) {
+    opacity: 0;
+  }
+  #side-bar.active span:nth-child(3) {
+    transform: rotate(-45deg);
+  }
+  #side-bar.active ~ .content {
+    opacity: 0.3;
+  }

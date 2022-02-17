@@ -1,46 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./index.css">
+    <script defer src="./index.js"></script>
     <title>Keatchus</title>
 </head>
+
 <body>
 
     <header>
-        <nav>
-            <!-- création du carré avec trois barre-->
-            <div class='icone'> 
-                <svg width="60" height="50">
-                    <rect x="5" y="2" rx="2" ry="2" width="50" height="5"
-                      style="fill:black;stroke:black;stroke-width:1;opacity:1.0" />
-                          <rect x="5" y="12" rx="2" ry="2" width="50" height="5"
-                      style="fill:black;stroke:black;stroke-width:1;opacity:1.0" />
-                          <rect x="5" y="22" rx="2" ry="2" width="50" height="5"
-                      style="fill:black;stroke:black;stroke-width:1;opacity:1.0" />
-                </svg> 
+
+        <!-- green bar header -->
+        <div class="green_bar"></div>
+
+        <!-- Name of application -->
+
+        <div class="logo">Keatchus</div>
+
+        <!-- Burger Menu -->
+
+        <nav id="side-bar">
+            <div class="toggle-button" id="toggle-button">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
+
+            <!-- nav bar -->
+
             <ul class="menu">
                 <li>Home</li>
                 <li>Livre</li>
                 <li>Rechercher</li>
                 <li>Notifications</li>
-                <li><img class="photo_profil" src="./image/christine_Pervenche.png" alt="photo profil christine"></li>
+                <li>Profil</li>
             </ul>
         </nav>
-        
-        <!-- <img class="couverture" id="fond" src="./image/wallpaper.jpg" alt="photo de courverture"> -->
+
+        <!-- Swipe bar contained Planning/Courses -->
+
         <div class="bar_swipe">
             <ul>
                 <li>Planning</li>
                 <li>Liste de Courses</li>
             </ul>
         </div>
-    
-    <!-- Swipe bar contained days of week -->
-    
+
+        <!-- Swipe bar contained days of week -->
+
         <div class="week">
             <ul>
                 <li>Lun</li>
@@ -54,104 +65,100 @@
         </div>
     </header>
 
-<!-- Bar swipe contained planning and liste de courses -->
+    <!-- main contain (pics/title) -->
 
+    <main>
+        <article>
+            <h2>Planning</h2>
 
+            <!-- Petit dejeuner -->
 
- 
-<!-- main contain (pics/title) -->
-<main>
-    <article>
-        <h2>Planning</h2>
+            <article class="petit_dej">
+                <h2>Petit dejeuner</h2>
 
-        <!-- Petit dejeuner -->
+                <!-- Contain pics/title of petit dejeuner -->
 
-        <article class="petit_dej">
-            <h2>Petit dejeuner</h2>
-            <!-- <img class="icone_plus" src="./image/icons8-plus-50.png" alt="Plus"> -->
-            
-            <!-- Contain pics/title of petit dejeuner -->
-
-            <section>
-                <div>
-                    <img src="./image/buddha-bowl.png" alt="buddha bowl">
-                    <div class="bloc_title">
-                        <p>buddha bowl</p>
+                <section>
+                    <div>
+                        <img src="./image/buddha-bowl.png" alt="buddha bowl">
+                        <div class="bloc_title">
+                            <p>buddha bowl</p>
+                        </div>
                     </div>
-                        
-                </div>
-            </section>
+                </section>
 
-        </article>    
+            </article>
 
-        <!-- Dejeuner -->
+            <!-- Dejeuner -->
 
-        <article class="dej">
-            <h2>Dejeuner</h2>
-            <!-- <img class="icone_plus" src="./image/icons8-plus-50.png" alt="Plus"> -->
-            
-            <!-- Contain pics/title of dejeuner -->
+            <article class="dej">
+                <h2>Dejeuner</h2>
+                <!-- <img class="icone_plus" src="./image/icons8-plus-50.png" alt="Plus"> -->
 
-            <section>
+                <!-- Contain pics/title of dejeuner -->
 
-                <!-- Tartare avocat -->
-                <div>
-                    <img src="./image/tartare-saumon-avocat.png" alt="tartare avocat saumon">
-                    <div class="bloc_title">
-                        <p>Tartare avocat</p>  
+                <section>
+
+                    <!-- Tartare avocat -->
+
+                    <div>
+                        <img src="./image/tartare-saumon-avocat.png" alt="tartare avocat saumon">
+                        <div class="bloc_title">
+                            <p>Tartare avocat</p>
+                        </div>
                     </div>
-                      
-                </div>
 
-                <!-- Wok au poulet -->
-                <div>
-                    <img src="./image/wok-au-poulet.png" alt="wok au poulet">
-                    <div class="bloc_title">
-                        <p>Wok au Poulet</p>  
-                    </div>
-                        
-                </div>
+                    <!-- Wok au poulet -->
 
-                <!-- Acai Bowl -->
-                <div>
-                    <img src="./image/açai-bowl.png" alt="acai bowl">
-                    <div class="bloc_title">
-                        <p>Acai Bowl</p>  
+                    <div>
+                        <img src="./image/wok-au-poulet.png" alt="wok au poulet">
+                        <div class="bloc_title">
+                            <p>Wok au Poulet</p>
+                        </div>
                     </div>
-                        
-                </div>
-            </section>
+
+                    <!-- Acai Bowl -->
+
+                    <div>
+                        <img src="./image/açai-bowl.png" alt="acai bowl">
+                        <div class="bloc_title">
+                            <p>Acai Bowl</p>
+                        </div>
+                    </div>
+                </section>
+            </article>
         </article>
-    </article>
 
-    <article>
-        <h2>Liste de Courses</h2>
+        <article>
+            <h2>Liste de Courses</h2>
 
-        <ul class="shoplist">
-            <li>
-                <input type="checkbox">
-                <label for="Carotte">Carotte</label>
-            </li>
+            <!-- Liste de courses -->
 
-            <li>
-                <input type="checkbox">
-                <label for="Poulet">Poulet</label>
-            </li>
+            <ul class="shoplist">
+                <li>
+                    <input type="checkbox">Carotte
+                    <!-- <label for="Carotte">Carotte</label> -->
+                </li>
 
-            <li>
-                <input type="checkbox">
-                <label for="Poivron">Poivrons</label>
-            </li>
+                <li>
+                    <input type="checkbox"> Poulet
+                    <!-- <label for="Poulet">Poulet</label> -->
+                </li>
 
-            <li>
-                <input type="checkbox">
-                <label for="Oignon">Oignon</label>
-            </li>
-        </ul>
-    </article>
-</main>
+                <li>
+                    <input type="checkbox">Poivrons
+                    <!-- <label for="Poivron">Poivrons</label> -->
+                </li>
 
-<script src="./index.js"></script>
+                <li>
+                    <input type="checkbox"> Oignon
+                    <!-- <label for="Oignon">Oignon</label> -->
+                </li>
+            </ul>
+        </article>
+    </main>
+
+    <script src="./index.js"></script>
 </body>
-</html>
 
+</html>
