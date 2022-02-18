@@ -46,6 +46,7 @@ table {
 /* ############### */
 
 /* navigation bar */
+
 header{
     position: fixed;
     display: flex;
@@ -64,57 +65,55 @@ header{
     background-color: #42593C;
 }
 
-.green_bar p {
-    vertical-align: middle;
+h1 {
     padding-top: 12px;
     text-align: center;
     vertical-align: middle;
-    color: #fffffdfd;
-    font-size: 50px;
+    color: #f6f6f6fd;
+    font-size: 40px;
+}
+
+.green_bar img {
+    position: absolute;
+    top:  15px;
+    right: 15px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
 }
 main {
     margin-top: 225px;
 }
 
-/* .menu {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #42593C;
-    margin-bottom: 30px;
-    font-size: 22px;
-    color: #FFFFFD;
-} */
-
-
-
-/* Picture of profil */
-
-/* .photo_profil {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: 3px solid white;
-} */
 
 /* Planning/Liste de courses Swipe Bar */
 
-.bar_swipe ul {
+.bar_swipe {
     text-align: center;
     display: flex;
+    align-items: center;
     justify-content: center;
-    padding-top: 7px;
-    padding-bottom: 7px;
+
+    /* gap: 5px;
     background-color: #42593C;
     border: 1px solid black;
     border-radius: 10px;
-    width: 300px;;
+    width: 300px;
     margin: auto;
     margin-top: 7px;
-    gap: 20px;
     font-size: 22px;
-    color: #FFFFFD;
+    color: #FFFFFD; */
 }
+
+.bar_swipe input {
+    background-color: #42593C;
+    border-radius: 20px;
+    padding: 10px;
+    color: white;
+    text-align: center;
+    font-size: 22px;
+}
+
 
 /* Swipe bar of Week */
 .week ul {
@@ -142,9 +141,10 @@ h2 {
     margin: 30px;
 }
 
-/* Changes Pics of petit dejeuner */
-.petit_dej img {
-    width: 300px;
+
+/* Changes Pics of petit dejeuner and dejeuner*/
+.petit_dej img, .dej img {
+    width: 170px;
     height: auto;
     border: 1px solid white;
     border-radius: 10px;
@@ -159,9 +159,6 @@ h2 {
 
 .dej section {
     margin-top: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
     font-size: 25px;
 }
 
@@ -169,7 +166,7 @@ h2 {
 
 .bloc_title {
     /* position: relative; */
-    width: 300px;
+    width: 170px;
     margin: auto;
     /* margin-top: -3px; */
     margin-bottom: 30px;
@@ -182,7 +179,7 @@ h2 {
 
 /* Pics of dejeuner */
 .dej img {
-    width: 300px;
+    width: 170px;
     height: auto;
     border: 1px solid white;
     border-radius: 10px;
@@ -194,7 +191,6 @@ h2 {
     text-align: center;
     border: 5px solid #42593C;
     border-radius: 20px;
-    width: 3O0px;
     margin: auto;
     margin-top: 30px;
     margin-left: 30px;
@@ -206,9 +202,10 @@ h2 {
 /* liste de courses */
 
 .shoplist {
-    width: 320px;
+    width: 250px;
+    margin: auto;
     text-align: center;
-    font-size: 22px;
+    font-size: 25px;
     border: 5px solid #42593C;
     border-radius: 20px;
     margin: auto;
@@ -266,10 +263,10 @@ h2 {
     padding-top: 10px;
     display: flex;
     flex-direction: column;
-    gap: 10px   ;
+    gap: 10px;
 }
 .menu li {
-    color: #FFFFFD;
+    color: #fffffd;
     list-style-type: none;
     font-size: 2.25rem;
     cursor: pointer;
@@ -284,8 +281,9 @@ h2 {
 
   /* Cross to close burger menu */
   #side-bar.active .toggle-button {
-    top: 30px;
-    right: 0px;
+      position: fixed;
+    top: -40px;
+    left: 260px;
   }
   #side-bar.active span {
     position: absolute;
@@ -304,3 +302,149 @@ h2 {
   #side-bar.active ~ .content {
     opacity: 0.3;
   }
+
+
+
+@media screen and (min-width: 420px ) {
+    .petit_dej img, .dej img {
+        width: 270px;
+    }
+    .bloc_title {
+        /* position: relative; */
+        width: 270px;
+    }
+}
+
+@media screen and (min-width: 520px ) {
+    .petit_dej img, .dej img {
+        width: 370px;
+    }
+    .bloc_title {
+        /* position: relative; */
+        width: 370px;
+    }
+}
+
+@media screen and (min-width: 620px ) {
+    .petit_dej img, .dej img {
+        width: 470px;
+    }
+    .bloc_title {
+        /* position: relative; */
+        width: 470px;
+    }
+}
+
+@media screen and (min-width: 768px ) {
+    .petit_dej img, .dej img {
+        width: 618px;
+    }
+    .bloc_title {
+        /* position: relative; */
+        width: 618px;
+    }
+    #side-bar.active {
+        left: 0;
+        width: 320px;
+      }
+}
+
+@media screen and (min-width: 868px ) {
+    .petit_dej img {
+        width: 718px;
+    }
+    .petit_dej .bloc_title {
+        /* position: relative; */
+        width: 718px;
+    }
+    .dej section {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .dej img {
+        width: 300px;
+        height: 200px;
+    }
+    .dej .bloc_title {
+        width: 300px;
+    }
+    #side-bar.active {
+        left: 0;
+        width: 320px;
+      }
+}
+
+@media screen and (min-width: 968px ) {
+    .petit_dej img {
+        width: 818px;
+    }
+    .petit_dej .bloc_title {
+        /* position: relative; */
+        width: 818px;
+    }
+    .dej section {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .dej img {
+        width: 400px;
+        height: 250px;
+    }
+    .dej .bloc_title {
+        width: 400px;
+    }
+    #side-bar.active {
+        left: 0;
+        width: 320px;
+      }
+}
+
+@media screen and (min-width: 1024px ) {
+    .week {
+        width: 460px;
+        margin-left: 135px;
+    }
+    .content_planning {
+        width: 480px;
+    }
+
+    .petit_dej img, .petit_dej .bloc_title {
+        width: 380px;
+    }
+    .dej img {
+        width: 380px;
+        height: 215px;
+    }
+    .dej .bloc_title {
+        width: 380px;
+    }
+    main {
+        display: flex;
+        justify-content: space-around;
+        align-items: baseline;
+        top: 0px;
+        margin-top: 175px;
+    }
+    .bar_swipe {
+        display: none;
+    }
+
+    .shoplist {
+        height: fit-content;
+        
+    }
+    #side-bar.active {
+        left: 0;
+        width: 320px;
+      }
+}
+
+
+
+
+
+
