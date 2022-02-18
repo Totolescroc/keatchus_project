@@ -13,7 +13,6 @@ let js_btn_planning = document.querySelector(".btn_planning");
 let js_btn_shoplist = document.querySelector(".btn_shoplist");
 let js_content_planning = document.querySelector(".content_planning");
 let js_shoplist = document.querySelector(".shoplist");
-console.log(js_btn_planning);
 
 // Swipe bar planning/liste de courses
 
