@@ -16,7 +16,11 @@
     <header>
 
         <!-- green bar header -->
-        <div class="green_bar"><p>Keatchus</p></div>
+        <div class="green_bar">
+            <p>Keatchus</p>
+            <img src="./image/christine_Pervenche.png" alt="Profil">
+        </div>
+
 
         <!-- Name of application -->
 
@@ -45,10 +49,11 @@
         <!-- Swipe bar contained Planning/Courses -->
 
         <div class="bar_swipe">
-            <ul>
-                <li>Planning</li>
-                <li>Liste de Courses</li>
-            </ul>
+
+            <input type="button" value="planning" class="btn_planning">
+            <input type="button" value="Liste de courses" class="btn_shoplist">
+
+            
         </div>
 
         <!-- Swipe bar contained days of week -->
@@ -69,7 +74,7 @@
     <!-- main contain (pics/title) -->
 
     <main>
-        <article>
+        <article class="content_planning">
             <h2>Planning</h2>
 
             <!-- Petit dejeuner -->
@@ -130,12 +135,12 @@
             </article>
         </article>
 
-        <article>
+        <article class="content_shoplist">
             <h2>Liste de Courses</h2>
 
             <!-- Liste de courses -->
 
-            <ul class="shoplist">
+            <ul class="shoplist" >
                 <li>
                     <input type="checkbox">Carotte
                     <!-- <label for="Carotte">Carotte</label> -->
