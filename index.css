@@ -45,8 +45,24 @@ table {
 
 /* ############### */
 
+/* Loading fonts */
+@font-face {
+    font-family: "Gastromond";
+    src: url("./Police/Gastromond.woff2"), url("./Police/Gastromond.woff") ;
+  }
+
+  @font-face {
+    font-family: "Superclarendon";
+    src: url("./Police/Superclarendon_Light.woff2"), url("./Police/Superclarendon_Light.woff") ;
+    font-weight: light;
+  }
+  
+  
 /* navigation bar */
 
+.week_desktop {
+    display: none;
+}
 header{
     position: fixed;
     display: flex;
@@ -71,6 +87,8 @@ h1 {
     vertical-align: middle;
     color: #f6f6f6fd;
     font-size: 40px;
+    cursor: pointer;
+    font-family: Gastromond;
 }
 
 .green_bar img {
@@ -80,6 +98,7 @@ h1 {
     width: 50px;
     height: 50px;
     border-radius: 50%;
+    cursor: pointer;
 }
 main {
     margin-top: 225px;
@@ -112,6 +131,8 @@ main {
     color: white;
     text-align: center;
     font-size: 22px;
+    cursor: pointer;
+    font-family: Superclarendon;
 }
 
 
@@ -130,15 +151,16 @@ main {
     margin-bottom: 30px;
     font-size: 22px;
     color: #FFFFFD;
+    cursor: pointer;
+    font-family: Superclarendon;
 }
-
-
 
 h2 {
     text-align: center;
     font-weight: bolder;
     font-size: 35px;
     margin: 30px;
+    font-family: Superclarendon;
 }
 
 
@@ -153,6 +175,7 @@ h2 {
 /* Increase font size of petit dejeuner section */
 .petit_dej section {
     font-size: 25px;
+    height: fit-content;
 }
 
 /* Dejeuner section */
@@ -165,16 +188,30 @@ h2 {
 /* Title of each meal */
 
 .bloc_title {
-    /* position: relative; */
     width: 170px;
     margin: auto;
-    /* margin-top: -3px; */
     margin-bottom: 30px;
     padding-bottom: 10px;
     padding-top: 10px;
     border-radius: 15px;
-    background: rgb(255, 255, 255);
+    /* background: rgb(255, 255, 255); */
     box-shadow: 0px 0px 2px rgb(0, 0, 0);
+    background-color: #42593C;
+    color: white;
+    font-family: Superclarendon;
+}
+
+.bloc_recipe {
+    width: 170px;
+    margin: auto;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 2px rgb(0, 0, 0);
+    background-color: #42593C;
+    color: white;
+    font-family: Superclarendon;   
 }
 
 /* Pics of dejeuner */
@@ -192,10 +229,7 @@ h2 {
     border: 5px solid #42593C;
     border-radius: 20px;
     margin: auto;
-    margin-top: 30px;
-    margin-left: 30px;
-    margin-right: 30px;
-    
+    margin-top: 30px;    
 }
 
 
@@ -209,6 +243,7 @@ h2 {
     border: 5px solid #42593C;
     border-radius: 20px;
     margin: auto;
+    font-family: Superclarendon;
     
 }
 
@@ -255,7 +290,7 @@ h2 {
     background: #FFFFFD;
     display: block;
     margin-top: 4px;
-    transition: 0.5s ease;
+    transition: 1s ease;
   }
 
   /* text of burger menu */
@@ -271,47 +306,49 @@ h2 {
     font-size: 2.25rem;
     cursor: pointer;
     padding-left: 5px;
-  }
+    font-family: Gastromond;
+}
  
   
-  #side-bar.active {
-    left: 0;
-    width: 100%;
-  }
+    #side-bar.active {
+      left: 0;
+      width: 100%;
+}
 
-  /* Cross to close burger menu */
-  #side-bar.active .toggle-button {
-      position: fixed;
-    top: -40px;
-    left: 260px;
-  }
-  #side-bar.active span {
-    position: absolute;
-  }
+/* Cross to close burger menu */
 
-  /* Animation of burger menu */
-  #side-bar.active span:nth-child(1) {
-    transform: rotate(45deg);
-  }
-  #side-bar.active span:nth-child(2) {
-    opacity: 0;
-  }
-  #side-bar.active span:nth-child(3) {
-    transform: rotate(-45deg);
-  }
-  #side-bar.active ~ .content {
-    opacity: 0.3;
-  }
+    #side-bar.active .toggle-button {
+        position: fixed;
+      top: -40px;
+      left: 260px;
+    }
+    #side-bar.active span {
+      position: absolute;
+    }
+    /* Animation of burger menu */
+    #side-bar.active span:nth-child(1) {
+      transform: rotate(45deg);
+    }
+    #side-bar.active span:nth-child(2) {
+      opacity: 0;
+    }
+    #side-bar.active span:nth-child(3) {
+      transform: rotate(-45deg);
+    }
+    #side-bar.active ~ .content {
+      opacity: 0.3;
+    }
 
 
+/* Media Querries */
 
 @media screen and (min-width: 420px ) {
     .petit_dej img, .dej img {
         width: 270px;
     }
-    .bloc_title {
-        /* position: relative; */
+    .bloc_title, .bloc_recipe {
         width: 270px;
+        font-family: Superclarendon;
     }
 }
 
@@ -319,9 +356,9 @@ h2 {
     .petit_dej img, .dej img {
         width: 370px;
     }
-    .bloc_title {
-        /* position: relative; */
+    .bloc_title, .bloc_recipe {
         width: 370px;
+        font-family: Superclarendon;
     }
 }
 
@@ -329,9 +366,9 @@ h2 {
     .petit_dej img, .dej img {
         width: 470px;
     }
-    .bloc_title {
-        /* position: relative; */
+    .bloc_title, .bloc_recipe {
         width: 470px;
+        font-family: Superclarendon;
     }
 }
 
@@ -339,23 +376,23 @@ h2 {
     .petit_dej img, .dej img {
         width: 618px;
     }
-    .bloc_title {
-        /* position: relative; */
+    .bloc_title, .bloc_recipe {
         width: 618px;
+        font-family: Superclarendon;
     }
     #side-bar.active {
         left: 0;
         width: 320px;
-      }
+    }
 }
 
 @media screen and (min-width: 868px ) {
     .petit_dej img {
         width: 718px;
     }
-    .petit_dej .bloc_title {
-        /* position: relative; */
+    .petit_dej .bloc_title, .petit_dej .bloc_recipe {
         width: 718px;
+        font-family: Superclarendon;
     }
     .dej section {
         display: flex;
@@ -367,22 +404,23 @@ h2 {
         width: 300px;
         height: 200px;
     }
-    .dej .bloc_title {
+    .dej .bloc_title, .dej .bloc_recipe {
         width: 300px;
+        font-family: Superclarendon;
     }
     #side-bar.active {
         left: 0;
         width: 320px;
-      }
+    }
 }
 
 @media screen and (min-width: 968px ) {
     .petit_dej img {
         width: 818px;
     }
-    .petit_dej .bloc_title {
-        /* position: relative; */
+    .petit_dej .bloc_title, .petit_dej .bloc_recipe {
         width: 818px;
+        font-family: Superclarendon;
     }
     .dej section {
         display: flex;
@@ -394,57 +432,288 @@ h2 {
         width: 400px;
         height: 250px;
     }
-    .dej .bloc_title {
+    .dej .bloc_title, .dej .bloc_recipe {
         width: 400px;
+        font-family: Superclarendon;
     }
     #side-bar.active {
         left: 0;
         width: 320px;
-      }
+    }
 }
 
 @media screen and (min-width: 1024px ) {
-    .week {
-        width: 460px;
-        margin-left: 135px;
-    }
+
     .content_planning {
-        width: 480px;
+        width: 580px;
     }
 
-    .petit_dej img, .petit_dej .bloc_title {
-        width: 380px;
+    .petit_dej img, .petit_dej .bloc_title, .petit_dej .bloc_recipe {
+        width: 480px;
+        font-family: Superclarendon;
     }
     .dej img {
-        width: 380px;
-        height: 215px;
+        width: 480px;
+        height: auto;
     }
-    .dej .bloc_title {
-        width: 380px;
+    .dej .bloc_title, .dej .bloc_recipe {
+        width: 480px;
+        font-family: Superclarendon;
     }
     main {
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
         align-items: baseline;
+        gap: 30px;
         top: 0px;
         margin-top: 175px;
     }
     .bar_swipe {
         display: none;
     }
-
     .shoplist {
-        height: fit-content;
-        
+        height: auto;
+        width: 360px;
+        font-family: Superclarendon;        
     }
     #side-bar.active {
         left: 0;
         width: 320px;
-      }
+    }
+    .week {
+        display: none;
+    }
+    .week_desktop {
+        display: block  ;
+    }
+    .week_desktop ul {
+        display: flex;
+        justify-content: space-around;
+        padding: 3px;
+        padding-top: 7px;
+        padding-bottom: 7px;
+        background-color: #42593C;
+        border: 1px solid black;
+        border-radius: 10px;
+        margin: 10px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+        font-size: 22px;
+        color: #FFFFFD;
+    }
 }
 
 
 
+@media screen and (min-width: 1324px ) {
+
+    .content_planning {
+        width: 680px;
+    }
+
+    .petit_dej img, .petit_dej .bloc_title, .petit_dej .bloc_recipe {
+        width: 530px;
+    }
+    .dej img {
+        width: 530px;
+    }
+    .dej .bloc_title, .dej .bloc_recipe {
+        width: 530px;
+    }
+
+    .shoplist {
+        width: 460px;        
+    }
+
+}
+
+@media screen and (min-width: 1440px ) {
+
+    .content_planning {
+        width: 780px;
+    }
+
+    .petit_dej img, .petit_dej .bloc_title, .petit_dej .bloc_recipe {
+        width: 530px;
+        font-size: 30px;
+    }
+    .dej img {
+        width: 530px;
+    }
+    .dej .bloc_title, .dej .bloc_recipe {
+        width: 530px;
+        font-size: 30px;
+    }
+
+    .shoplist {
+        width: 510px;  
+        font-size: 30px;      
+    }
+    .green_bar {
+        padding-bottom: 20px;
+    }
+
+    .week_desktop {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .shoplist li {
+        font-size: 30px; 
+    }
+
+    .week_desktop ul {
+        font-size: 30px;
+    }
+
+    h1 {
+        font-size: 60px;
+    }
+    h2 {
+        font-size: 40px;
+    }
+
+}
+
+@media screen and (min-width: 1640px ) {
+
+    .content_planning {
+        width: 880px;
+    }
+
+    .petit_dej img, .petit_dej .bloc_title, .petit_dej .bloc_recipe {
+        width: 630px;
+    }
+    .dej img {
+        width: 630px;
+    }
+    .dej .bloc_title, .dej .bloc_recipe {
+        width: 630px;
+    }
+
+    .shoplist {
+        width: 630px;        
+    }
+
+}
+
+@media screen and (min-width: 1840px ) {
+
+    .content_planning {
+        width: 980px;
+    }
+
+    .petit_dej img, .petit_dej .bloc_title, .petit_dej .bloc_recipe {
+        width: 730px;
+    }
+    .dej img {
+        width: 730px;
+    }
+    .dej .bloc_title, .dej .bloc_recipe {
+        width: 730px;
+    }
+
+    .shoplist {
+        width: 730px;        
+    }
+
+}
+
+@media screen and (min-width: 2040px ) {
+
+    .content_planning {
+        width: 1080px;
+    }
+
+    .petit_dej img, .petit_dej .bloc_title, .petit_dej .bloc_recipe {
+        width: 830px;
+        font-size: 30px;
+    }
+    .dej img {
+        width: 830px;
+    }
+    .dej .bloc_title, .dej .bloc_recipe {
+        width: 830px;
+        font-size: 30px;
+    }
+
+    .shoplist {
+        width: 830px;       
+    }
 
 
+}
 
+@media screen and (min-width: 2240px ) {
+
+    .content_planning {
+        width: 1180px;
+    }
+
+    .petit_dej img, .petit_dej .bloc_title, .petit_dej .bloc_recipe {
+        width: 930px;
+        font-size: 30px;
+    }
+    .dej img {
+        width: 930px;
+    }
+    .dej .bloc_title, .dej .bloc_recipe {
+        width: 930px;
+        font-size: 30px;
+    }
+
+    .shoplist {
+        width: 930px;       
+    }
+}
+
+@media screen and (min-width: 2560px ) {
+
+    .content_planning {
+        width: 1280px;
+    }
+
+    .petit_dej img, .petit_dej .bloc_title, .petit_dej .bloc_recipe {
+        width: 1030px;
+        font-size: 40px;
+    }
+    .dej img {
+        width: 1030px;
+    }
+    .dej .bloc_title, .dej .bloc_recipe {
+        width: 1030px;
+        font-size: 40px;
+    }
+
+    .shoplist {
+        width: 1030px;       
+    }
+
+    .green_bar {
+        padding-bottom: 40px;
+    }
+
+    .week_desktop {
+        margin-top: 40px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .shoplist li {
+        font-size: 40px; 
+    }
+
+    .week_desktop ul {
+        font-size: 40px;
+    }
+
+    h1 {
+        font-size: 100px;
+    }
+    h2 {
+        font-size: 60px;
+    }
+
+    main  {
+        margin-top: 260px;
+    }
+}
